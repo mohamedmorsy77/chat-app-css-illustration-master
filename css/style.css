@@ -1,0 +1,351 @@
+/* Start Variables */
+:root {
+    /* Text */
+    --Pale-Violet : hsl(276, 100%, 81%);
+    --Desaturated-Dark-Violet:  hsl(271, 15%, 43%);
+    --Moderate-Violet : hsl(276, 55%, 52%);  
+    --Grayish-Blue-placeholder-text: hsl(206, 6%, 79%);
+    --Very-Dark-Desaturated-Violet-main-heading: hsl(271, 36%, 24%);
+    --Dark-Grayish-Violet-paragraph: hsl(270, 7%, 64%);
+    /* gragients */
+    --Light-Magenta: hsl(293, 100%, 63%) ;
+    --Light-Violet: hsl(264, 100%, 61%);
+    /* Secondary */
+    --White: hsl(0, 0%, 100%) ;
+    --Light-Grayish-Violet-app-background: hsl(270, 20%, 96%);
+    --Very-Dark-Desaturated-Violet-submit-button-background: hsl(271, 36%, 24%) ;
+    --Very-Light-Magenta-radio-button-outline: hsl(289, 100%, 72%);
+
+}
+/* End Variables */
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Rubik', sans-serif;
+  position: relative;
+  Font-size: 16px;
+  background-color: var(--Light-Grayish-Violet-app-background);
+}
+body::before {
+    content: "";
+    position: absolute;
+    top: -100px;
+    left: -130px;
+    width: 500px;
+    height: 708px;
+    z-index: -1;
+    border-bottom-right-radius: 250px;
+    border-bottom-left-radius: 250px;
+    background-image: linear-gradient(var(--Light-Magenta), var(--Light-Violet));
+}
+body::after {
+    content: "";
+    position: absolute;
+    bottom: -100px;
+    right: -170px;
+    width: 500px;
+    height: 708px;
+    z-index: -1;
+    border-top-right-radius: 250px;
+    border-top-left-radius: 250px;
+    background-color: hsl(276, 100%, 81%, .1);
+
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 60px;
+}
+.mobil {
+   position: relative;
+   background-color: var(--White);
+   box-shadow: 1px 1px 5px -1px var(--Grayish-Blue-placeholder-text);
+   width: 310px;
+   height: 615px;
+   border-radius: 15px;
+   -webkit-border-radius: 15px;
+   -moz-border-radius: 15px;
+   -ms-border-radius: 15px;
+   -o-border-radius: 15px;
+   padding: 10px;
+   opacity: 0;
+   animation: show .3s;
+   -webkit-animation: show .3s forwards .3s;
+}
+@keyframes show {
+    0% {opacity: 0;}
+    10% {opacity: .2;}
+    50% {opacity: .5;}
+    70% {opacity: .7;}
+    100% {opacity: 1;}
+}
+.mobil .chats {
+    background-color: var(--Light-Grayish-Violet-app-background);
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+    height: 100%;
+}
+.mobil .chats header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background-image: linear-gradient(to left ,var(--Light-Magenta), var(--Light-Violet));
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+    position: relative;
+    
+}
+.mobil .chats header i {
+    color: white;
+}
+.mobil .chats header i:nth-child(1) {
+    position: absolute;
+    left: 10px;
+    top: 35px;
+
+}
+.mobil .chats header i:nth-child(2) {
+    position: absolute;
+    right: 20px;
+    top: 35px;
+
+}
+
+.mobil .chats header .image {
+    margin-top: 20px;
+}
+.mobil .chats header .image img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    border: 2px solid var(--White);
+    margin-left: 35px;
+}
+.mobil .chats header .info {
+    font-size: 8px;
+    margin-top: 20px;
+    
+    
+}
+.mobil .chats header .info h2 {
+    color: var(--White);
+}
+.mobil .chats header .info p {
+    color: var(--Grayish-Blue-placeholder-text);
+    
+
+}
+header::before {
+    content: "";
+    position: absolute;
+    top: -5px;
+    left: 50px;
+    background-color: var(--White);
+    width: 180px;
+    height: 25px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+.mobil .send {
+    background-color: var(--Pale-Violet);
+    color: var(--Moderate-Violet);
+    width: 200px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    margin-left: 10px;
+    padding: 7px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    font-size: 13px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 0px;
+    line-height: 1.5;
+    box-shadow: 1px 1px 5px -1px var(--Grayish-Blue-placeholder-text);
+
+}
+.mobil .dog_image {
+    display: flex;
+    gap: 11px;
+    justify-content: end;
+    margin-right: 10px;
+    margin-top: 19px;
+    
+}
+.mobil .dog_image img {
+    width: 33px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+.mobil .response {
+    color: var(--Desaturated-Dark-Violet);
+    background-color: var(--White);
+    width: 200px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    font-size: 13px;
+    margin: 10px 70px;
+    padding: 10px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 0px;
+    box-shadow: 1px 1px 5px -1px var(--Grayish-Blue-placeholder-text);
+}
+.mobil  .sp {
+    width: 130px;
+    margin-left: 140px;
+}
+.mobil .time {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: blanchedalmond;
+    width: 230px;
+    height: 40px;
+    margin-top: 10px;
+    margin-left: 10px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    background-image: linear-gradient(to right, var(--Light-Magenta), var(--Light-Violet));
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 0px;
+}
+.mobil .time::before {
+    content: " ";
+    position: absolute;
+    left: 10px;
+    width: 20px;
+    height: 20px;
+    border: 2px solid var(--Grayish-Blue-placeholder-text);
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+
+.mobil .time p {
+    color: var(--Grayish-Blue-placeholder-text);
+    font-size: 13px;
+    margin-left: 25px;
+}
+.mobil .time span {
+    color: var(--White);
+    font-weight: bold;
+}
+.mobil .chats .submit {
+    margin: 12px auto;
+    width: 257px;
+    height: 30px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+    position: relative;
+}
+.mobil .chats .submit input {
+    height: 15px;
+    border: none;
+    outline: none;
+    position: absolute;
+    top: 11.5px;
+    
+}
+.mobil .chats .submit i {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    background-color: var(--Very-Dark-Desaturated-Violet-submit-button-background);
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container {
+    display: flex;
+    justify-content: sspace-around;
+    align-items: center;
+    gap: 100px;
+    max-width: 900px;
+    
+
+}
+.container .text h2 {
+    font-size: 40px;
+    color: var(--Very-Dark-Desaturated-Violet-main-heading);
+}
+.container .text p {
+   line-height: 1.8;
+   color: var(--Dark-Grayish-Violet-paragraph);
+}
+@media (max-width: 991px) {
+    .container {
+        flex-wrap: wrap;
+        gap: 0;
+        margin: 0px;
+    }
+    .mobil {
+        margin: 0 auto;
+    }
+    .container .text {
+       text-align: center;
+    }
+    body::before,
+    body::after {
+        content: "";
+        width: 375px;
+    }
+}
